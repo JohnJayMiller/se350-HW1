@@ -1,8 +1,8 @@
-package homework1;
+package homework3.Airline;
 
 import java.util.Objects;
 
-public class Airline {
+public class Airline implements AirlineInterface {
     private String String;
 
     public Airline(String string) throws IllegalArgumentException {
@@ -23,9 +23,9 @@ public class Airline {
 
     @Override
     public java.lang.String toString() {
-        return "Airline{" +
-                "String='" + String + '\'' +
-                '}';
+       return "Airline{" +
+               "String='" + String + '\'' +
+              '}';
     }
 
     @Override

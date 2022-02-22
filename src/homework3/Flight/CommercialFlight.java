@@ -1,13 +1,14 @@
-package homework1;
+package homework3.Flight;
+
+import homework3.Airline.Airline;
+import homework3.Airport.Airport;
 
 import java.util.Date;
-import java.util.Objects;
-import java.util.UUID;
 
 import static java.util.UUID.randomUUID;
 
 
-public class Flight {
+public class CommercialFlight implements Flight {
     private Airline airline;
     private Airport origin;
     private Airport destination;
@@ -17,6 +18,7 @@ public class Flight {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append(String.format("%-20s %n", "Commercial Flight"));
         sb.append(String.format("%-20s %s%n", "Airline:", getAirline()));
         sb.append(String.format("%-20s %s%n", "Origin:", getOrigin()));
         sb.append(String.format("%-20s %s%n", "destination:", getDestination()));
@@ -25,7 +27,7 @@ public class Flight {
         return sb.toString();
     }
 
-    public Flight(Airline airline, Airport origin, Airport destination, Date departureTime) throws IllegalArgumentException {
+    public CommercialFlight(Airline airline, Airport origin, Airport destination, Date departureTime) throws IllegalArgumentException {
         setAirline(airline);
         setOrigin(origin);
         setDestination(destination);

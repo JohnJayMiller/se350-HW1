@@ -1,8 +1,8 @@
-package homework1;
+package homework3.Airport;
 
 import java.util.Objects;
 
-public class Airport {
+public class Airport implements AirportInterface {
     private String String;
 
     public Airport(String string) throws IllegalArgumentException {
